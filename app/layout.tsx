@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Aiqueevoice",
   },
   description: "AI-powered text-to-speech and voice cloning platform",
+  icons: "/logo.svg",
 };
 
 export default function RootLayout({
