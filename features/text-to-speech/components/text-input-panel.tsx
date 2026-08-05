@@ -10,6 +10,7 @@ import { VoiceSelectorButton } from "./voice-selector-button";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { useTypedAppFormContext } from "@/hooks/use-app-form";
+import { formatLocaleNumber } from "@/lib/utils";
 
 import {
   COST_PER_UNIT,
@@ -76,9 +77,9 @@ export function TextInputPanelSpecs() {
             </Badge>
             <div className="flex items-center gap-3">
               <p className="text-xs tracking-tight">
-                {text.length.toLocaleString()}
+                {formatLocaleNumber(text.length)}
                 <span className="text-muted-foreground">
-                  &nbsp;/&nbsp;{TEXT_MAX_LENGTH.toLocaleString()} characters
+                  &nbsp;/&nbsp;{formatLocaleNumber(TEXT_MAX_LENGTH)} characters
                 </span>
               </p>
               <GenerateButton

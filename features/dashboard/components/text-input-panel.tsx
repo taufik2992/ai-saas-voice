@@ -6,6 +6,7 @@ import { Coins } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { formatLocaleNumber } from "@/lib/utils";
 
 import {
   COST_PER_UNIT,
@@ -60,8 +61,8 @@ export function TextInputPanel() {
               </span>
             </Badge>
             <span className="text-xs text-muted-foreground">
-              {text.length.toLocaleString()} /{" "}
-              {TEXT_MAX_LENGTH.toLocaleString()} characters
+              {formatLocaleNumber(text.length)} /{" "}
+              {formatLocaleNumber(TEXT_MAX_LENGTH)} characters
             </span>
           </div>
         </div>
