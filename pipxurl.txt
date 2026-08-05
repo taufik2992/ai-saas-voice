@@ -1,0 +1,1 @@
+/c/Users/Rifal/.local/bin/modal.exe run chatterbox_tts.py  
