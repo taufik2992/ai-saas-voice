@@ -3,17 +3,6 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-import { OrganizationSwitcher, UserButton, useClerk } from "@clerk/nextjs";
-import {
-  type LucideIcon,
-  Home,
-  LayoutGrid,
-  AudioLines,
-  Volume2,
-  Settings,
-  Headphones,
-} from "lucide-react";
-import Link from "next/link";
 import {
   Sidebar,
   SidebarContent,
@@ -29,6 +18,19 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Skeleton } from "@/components/ui/skeleton";
+import { OrganizationSwitcher, UserButton, useClerk } from "@clerk/nextjs";
+import {
+  type LucideIcon,
+  Home,
+  LayoutGrid,
+  AudioLines,
+  Volume2,
+  Settings,
+  Headphones,
+} from "lucide-react";
+import Link from "next/link";
+import { VoiceCreateDialog } from "@/features/voices/components/voice-create-dialog";
+import { useState } from "react";
 
 interface MenuItem {
   title: string;
@@ -91,6 +93,7 @@ function NavSection({ label, items, pathname }: NavSectionProps) {
 export function DashboardSidebar() {
   const pathname = usePathname();
   const clerk = useClerk();
+  const [voiceDialogOpen, setVoiceDialogOpen] = useState(false);
 
   const mainMenuItems: MenuItem[] = [
     {
@@ -111,6 +114,7 @@ export function DashboardSidebar() {
     {
       title: "Voice cloning",
       icon: Volume2,
+      onClick: () => setVoiceDialogOpen(true),
     },
   ];
 
@@ -122,13 +126,17 @@ export function DashboardSidebar() {
     },
     {
       title: "Help and support",
-      url: "mailto:taufikhidayat0032@gmail.com",
+      url: "mailto:business@codewithantonio.com",
       icon: Headphones,
     },
   ];
 
   return (
     <>
+      <VoiceCreateDialog
+        open={voiceDialogOpen}
+        onOpenChange={setVoiceDialogOpen}
+      />
       <Sidebar collapsible="icon">
         <SidebarHeader className="flex flex-col gap-4 pt-4">
           <div className="flex items-center gap-2 pl-1 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:pl-0">
@@ -140,7 +148,7 @@ export function DashboardSidebar() {
               className="rounded-sm"
             />
             <span className="group-data-[collapsible=icon]:hidden font-semibold text-lg tracking-tighter text-foreground">
-              Aiqueevoice
+              Resonance
             </span>
             <SidebarTrigger className="ml-auto lg:hidden" />
           </div>

@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { VoiceAvatar } from "@/components/voice-avatar/voice-avatar";
 import { Spinner } from "@/components/ui/spinner";
 import { cn } from "@/lib/utils";
+
 import { useWaveSurfer } from "../hooks/use-wavesurfer";
 
 type VoicePreviewPanelVoice = {

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { QuickAction } from "../data/quick-actions";
-import { cn } from "@/lib/utils";
+
 import { Button } from "@/components/ui/button";
+import type { QuickAction } from "@/features/dashboard/data/quick-actions";
+import { cn } from "@/lib/utils";
 
 type QuickActionCardProps = QuickAction;
 

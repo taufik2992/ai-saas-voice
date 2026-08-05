@@ -3,6 +3,10 @@
 import { Coins } from "lucide-react";
 import { useStore } from "@tanstack/react-form";
 
+import { SettingsDrawer } from "./settings-drawer";
+import { HistoryDrawer } from "./history-drawer";
+import { VoiceSelectorButton } from "./voice-selector-button";
+
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { useTypedAppFormContext } from "@/hooks/use-app-form";
@@ -13,9 +17,6 @@ import {
 } from "@/features/text-to-speech/data/constants";
 import { ttsFormOptions } from "./text-to-speech-form";
 import { GenerateButton } from "./generate-button";
-import { HistoryDrawer } from "./history-drawer";
-import { SettingsDrawer } from "./settings-drawer";
-import { VoiceSelectorButton } from "./voice-selector-button";
 import { PromptSuggestions } from "./prompt-suggestions";
 
 export function TextInputPanelSpecs() {

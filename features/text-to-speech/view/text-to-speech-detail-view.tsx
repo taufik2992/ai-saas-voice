@@ -8,10 +8,10 @@ import {
   TextToSpeechForm,
   type TTSFormValues,
 } from "@/features/text-to-speech/components/text-to-speech-form";
-import { TTSVoicesProvider } from "../context/tts-voices-context";
-import { TextInputPanelSpecs } from "../components/text-input-panel";
-import { VoicePreviewMobile } from "../components/voice-preview-mobile";
 import { VoicePreviewPanel } from "../components/voice-preview-panel";
+import { VoicePreviewMobile } from "../components/voice-preview-mobile";
+import { TextInputPanelSpecs } from "../components/text-input-panel";
+import { TTSVoicesProvider } from "../context/tts-voices-context";
 
 export function TextToSpeechDetailView({
   generationId,

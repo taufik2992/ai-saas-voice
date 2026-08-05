@@ -3,7 +3,6 @@
 import { useSuspenseQuery } from "@tanstack/react-query";
 
 import { useTRPC } from "@/trpc/client";
-import { TextInputPanelSpecs } from "@/features/text-to-speech/components/text-input-panel";
 import { VoicePreviewPlaceholder } from "@/features/text-to-speech/components/voice-preview-placeholder";
 import { SettingsPanel } from "@/features/text-to-speech/components/settings-panel";
 import {
@@ -11,6 +10,7 @@ import {
   defaultTTSValues,
   type TTSFormValues,
 } from "@/features/text-to-speech/components/text-to-speech-form";
+import { TextInputPanelSpecs } from "../components/text-input-panel";
 import { TTSVoicesProvider } from "../context/tts-voices-context";
 
 export function TextToSpeechView({

@@ -1,9 +1,10 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import { Headphones, ThumbsUp } from "lucide-react";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export function DashboardHeader() {
   const { isLoaded, user } = useUser();
@@ -19,13 +20,13 @@ export function DashboardHeader() {
 
       <div className="lg:flex items-center gap-3 hidden">
         <Button variant="outline" size="sm" asChild>
-          <Link href="mailto:taufikhidayat0032@wantquedev.com">
+          <Link href="mailto:business@codewithantonio.com">
             <ThumbsUp />
             <span className="hidden lg:block">Feedback</span>
           </Link>
         </Button>
         <Button variant="outline" size="sm" asChild>
-          <Link href="mailto:taufikhidayat0032@wantquedev.com">
+          <Link href="mailto:business@codewithantonio.com">
             <Headphones />
             <span className="hidden lg:block">Need help?</span>
           </Link>

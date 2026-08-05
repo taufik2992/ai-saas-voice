@@ -53,14 +53,14 @@ export function TextInputPanel() {
                   <>
                     <span className="tabular-nums">
                       ${(text.length * COST_PER_UNIT).toFixed(4)}
-                    </span>
-                    &nbsp;estimated
+                    </span>{" "}
+                    estimated
                   </>
                 )}
               </span>
             </Badge>
             <span className="text-xs text-muted-foreground">
-              {text.length.toLocaleString()}&nbsp;/&nbsp;
+              {text.length.toLocaleString()} /{" "}
               {TEXT_MAX_LENGTH.toLocaleString()} characters
             </span>
           </div>
